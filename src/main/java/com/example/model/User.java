@@ -12,8 +12,8 @@ public class User {
     private String city;
     private String postalCode;
 
-
-
+    public User ()
+    {}
     public User( String firstname, String lastname, String dateOfBirth, String email, String password, String city, String postalCode) {
 
         this.firstname = firstname;
@@ -25,7 +25,7 @@ public class User {
         this.postalCode = postalCode;
     }
 
-    // Getters and setters
+    // Getters and setters to use them all over ,
     public int getId() {
         return id;
     }
