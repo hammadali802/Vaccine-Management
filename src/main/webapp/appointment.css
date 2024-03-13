@@ -15,104 +15,85 @@ body {
     height: 100vh;
 }
 
-.container {
-    width: 400px;
-    margin: 50px auto;
-    background-color: #ffffff8a;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+/*.container {*/
+/*    width: 400px;*/
+/*    margin: 50px auto;*/
+/*    background-color: #ffffff8a;*/
+/*    padding: 20px;*/
+/*    border-radius: 10px;*/
+/*    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+/*}*/
 
 h1 {
     text-align: center;
     color: #333;
 }
 
-form {
-    margin-top: 20px;
-}
-
-.input-field {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #0ba1ec;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-.logout-form {
-    margin-top: 20px;
+/* Apply beautiful table design */
+h1 {
     text-align: center;
+    margin-top: 50px;
 }
 
-.logout-form input[type="submit"] {
-    background-color: #f44336;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
+table {
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    /*background-color: #fff;*/
+    margin: 0 auto;
+    background: linear-gradient(90deg, rgb(205 204 228) 0%, rgb(228 228 255) 35%, rgba(0, 212, 255, 1) 100%);
+    /*background: rgb(2,0,36);*/
+    /*background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);*/
 }
 
-.logout-form input[type="submit"]:hover {
-    background-color: #d32f2f;
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
 }
-a {
-    text-decoration: none;
-    color: #007BFF;
+
+th {
+
+    background-color: #0a0d0f85;
+    /*background-color: #0e395e;*/
+    /*background: rgb(2,0,36);*/
+    /*background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);*/
+    color: #fff;
     font-weight: bold;
+    /*text-transform: uppercase;*/
 }
 
-a:hover {
-    color: #0056b3;
+tr:hover {
+    background-color: #f2f2f2;
 }
-.navbar {
 
-     overflow: hidden;
-     background-color: #10519b78; /* Background color of the navbar */
-     position: fixed; /* Fix the navbar at the top */
-     top: 0;
-     width: 100%; /* Full width */
- }
+.btn {
+    padding: 6px 12px;
+}
+.button {
+    padding: 10px 20px; /* Adjust padding as needed */
+    background-color: #e80808; /* Red color */
+    color: white; /* Text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-/* Style the links inside the navigation bar */
-.navbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2; /* Text color of the links */
+.button:hover {
+    background-color: #d21616; /* Darker red color on hover */
+}
+.row {
+    /*position: relative;*/
+}
+
+#noUsersMessage {
+    background: aliceblue;
+    border: solid;
+    padding: 100px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    padding: 14px 16px; /* Padding of the links */
-    text-decoration: none;
-}
-
-/* Change color on hover */
-.navbar a:hover {
-    background-color: #ddd; /* Background color of the links on hover */
-    color: black; /* Text color of the links on hover */
-}
-
-/* Add an active class to highlight the current page */
-.navbar a.active {
-    background-color: #4CAF50; /* Background color of the active link */
-    color: white; /* Text color of the active link */
 }

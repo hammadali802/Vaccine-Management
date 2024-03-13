@@ -8,13 +8,8 @@ import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
-import static com.example.db.DBUtil.getConnection;
+
 
 @WebServlet(name = "AppointmentServlet", value = "/appointment.swe")
 public class AppointmentServlet extends HttpServlet {
@@ -93,6 +88,7 @@ public class AppointmentServlet extends HttpServlet {
                 AppointmentDao appointmentDAO = new AppointmentDao();
 
               int appointmentId =  appointmentDAO.addAppointment(appointment);
+
 //        Date date = null;
 //        try {
 //            date = new SimpleDateFormat("yyyy-MM-dd").parse(dateStr);

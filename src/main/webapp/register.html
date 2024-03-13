@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <link rel="stylesheet" href="appointment.css">
-<!--    <link rel="stylesheet" href="style.css">-->
+    <link rel="stylesheet" href="booking.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
 </head>
 <body>
 <div class="navbar">
     <a href="index.html" >Home</a>
     <a href="#" class="active">Registrieren</a>
     <a href="login.html" >Einloggen</a>
-    <a href="#" >Über Uns</a>
+    <a href="#" >Ueber Uns</a>
 </div>
     <div class="container">
         <h1>Registrieren</h1>
-        <form action="adduser.swe" method="post">
+        <form action="insertUser" method="post">
 
 
 
@@ -43,10 +44,8 @@
             <button type="submit">Registrieren</button>
 
         </form>
-            <br><a href="login.html">Einloggen</a><br>
 
-        <p><a href="index.html"> Home</a></p>
-
+    </div>
 
     <script>
        // Get the error parameter from the URL (assuming it's passed as a query parameter)
@@ -62,9 +61,17 @@
 
          const parentElement = document.querySelector(".container"); //
          parentElement.appendChild(errorElement);
+       }  else if(error === "emailexists") {
+         const errorElement = document.createElement("p");
+         errorElement.style.color = "red";
+         errorElement.textContent = "Email exists, please enter another email";
+
+
+         const parentElement = document.querySelector(".container"); //
+         parentElement.appendChild(errorElement);
        }
 
       </script>
-    </div>
+
 </body>
 </html>

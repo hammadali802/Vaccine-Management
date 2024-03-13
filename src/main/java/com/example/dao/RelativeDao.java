@@ -1,6 +1,7 @@
 package com.example.dao;
 
 import com.example.db.DBUtil;
+import com.example.db.Queries;
 import com.example.model.Relative;
 import com.example.model.User;
 
@@ -8,7 +9,7 @@ import java.sql.*;
 
 public class RelativeDao {
     public int insertRelative(Relative relative) {
-        String query = "INSERT INTO relatives (user_id, firstname, lastname, dateofbirth, city, postalcode) VALUES (?, ?, ?, ?, ?, ?)";
+        String query = Queries.INSERT_RELATIVE;
         int id = -1;
         try (
                 Connection connection = DBUtil.getConnection();

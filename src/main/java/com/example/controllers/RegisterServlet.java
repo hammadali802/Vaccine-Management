@@ -8,20 +8,28 @@ import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
+//using web annotation to map the url
 
-@WebServlet(name = "UserServlet", value = "/adduser.swe")
-public class UserServlet extends HttpServlet {
-    public UserServlet(){
+@WebServlet(name = "RegisterServlet", value = "/insertUser")
+public class RegisterServlet extends HttpServlet {
+    public RegisterServlet(){
         super();
     }
     private static final long serialVersionUID = 1L;
+
+//    @Override
+//    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+////    resp.getWriter().write(req.getSession().getAttribute("userId").toString());
+//    }
+//
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //
 //        if (session == null) {
 //            response.sendRedirect("login.html");
 //            return;
 //        }
-//          HttpSession session = request.getSession();
+          HttpSession session = request.getSession();
 
 
         String firstname = request.getParameter("firstname");
@@ -38,22 +46,16 @@ int userId = -1;
 
         User user = new User(firstname, lastname, dateofbirth, email,password,city,postalcode);
         UserDao userDao = new UserDao();
-        if (userDao.isEmailExists(email)) {
-        userId = userDao.addUser(user);
 
-        } else{
-            response.sendRedirect("register.html?error=1");
-
-        }
-//        session.setAttribute("userId",userId);
-
-
-        System.out.println(userId);
-
-        if ( userId > 0 ) {
-            response.sendRedirect("login.html?registration=success");
+        if (!userDao.isEmailExists(email)) {
+            userId = userDao.addUser(user);
+            if (userId > 0) {
+                response.sendRedirect("login.html?registration=success");
+            } else {
+                response.sendRedirect("register.html?error=1");
+            }
         } else {
-            response.sendRedirect("register.html?error=1");
+            response.sendRedirect("register.html?error=emailexists");
         }
 
 

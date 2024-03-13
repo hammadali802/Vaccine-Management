@@ -1,7 +1,7 @@
 package com.example.model;
 
-import java.sql.Date;
-import java.sql.Time;
+import com.example.model.Relative;
+import com.example.model.User;
 
 public class Appointment {
     private int id;
@@ -11,6 +11,36 @@ public class Appointment {
     private String vaccine;
     private String date;
     private String time;
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    private String firstname;
+    private String lastname;
+
+    public User getUser() {
+        return user;
+    }
+
+    public Relative getRelative() {
+        return relative;
+    }
+
+    private User user;
+
+    private Relative relative;
     public int getId() {
         return id;
     }
@@ -89,7 +119,15 @@ public class Appointment {
 //        this.time = time;
 //    }
 
-    // Getters and setters
-    // Note: I've omitted the getters and setters for 'id' since it's an auto-incremented primary key
-}
+        // Getters and setters
+        // Note: I've omitted the getters and setters for 'id' since it's an auto-incremented primary key
+    }
+
+
+    public void setUser(User user) {
+    }
+
+
+    public void setRelative(Relative relative) {
+    }
 }

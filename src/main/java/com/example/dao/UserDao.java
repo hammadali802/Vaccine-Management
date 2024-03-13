@@ -10,7 +10,7 @@ import java.sql.*;
 
 public class UserDao {
     public int addUser(User user) {
-        String query = "INSERT INTO users (firstname, lastname, dateofbirth, email, password,  city, postalcode) VALUES ( ?, ?,?,?,?,?,?)";
+        String query = Queries.INSERT_USER;
         int id = -1;
         try (
               Connection connection = DBUtil.getConnection();
@@ -39,23 +39,32 @@ public class UserDao {
             return id;
     }
 
-    public boolean isValidUser(String email, String password) {
+    public User isValidUser(String email, String password) {
         String query = "SELECT * FROM users WHERE email = ? AND password = ?";
+        User user = null;
 
         try (
                 Connection connection = DBUtil.getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-
+                PreparedStatement preparedStatement = connection.prepareStatement(query)
+        ) {
             preparedStatement.setString(1, email);
             preparedStatement.setString(2, password);
 
-            ResultSet resultSet = preparedStatement.executeQuery();
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                if (resultSet.next()) {
+                    // User exists, populate User object
+                    user = new User();
+                    user.setId(resultSet.getInt("id"));
+                    user.setFirstname(resultSet.getString("firstname"));
+                    user.setLastname(resultSet.getString("lastname"));
 
-            return resultSet.next();
+                }
+            }
         } catch (SQLException e) {
             e.printStackTrace();
-            return false;
         }
+
+        return user;
     }
 
     public boolean isEmailExists(String email) {
@@ -68,6 +77,7 @@ public class UserDao {
             preparedStatement.setString(1, email);
 
             ResultSet resultSet = preparedStatement.executeQuery();
+
 
             return resultSet.next();  // Returns true if a user with the provided email exists
         } catch (SQLException e) {

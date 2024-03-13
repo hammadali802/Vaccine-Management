@@ -1,6 +1,6 @@
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-    username VARCHAR(255) NOT NULL,
+
     firstname VARCHAR(255) NOT NULL,
     lastname VARCHAR(255) NOT NUll,
     dateofbirth DATE NOT NULL,

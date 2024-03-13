@@ -2,68 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Impftermin-Buchung</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booked Appointments</title>
     <link rel="stylesheet" href="appointment.css">
+    <link rel="stylesheet" href="navbar.css">
 </head>
-<body>
+<body onload="init();">
 <div class="navbar">
-    <a href="#" class="active">Termin buchen</a>
-    <a href="#">Termin ansehen</a>
+    <a href="booking.html" >Termin buchen</a>
+    <a href="#" class="active">Termin ansehen</a>
     <a href="#">QR Code</a>
-    <a href="#">Abmelden</a>
+    <a href="logout">Abmelden</a>
 </div>
-<div class="container">
-    <h1>Impftermin-Buchung</h1>
-    <form action="appointment.swe" method="post">
 
-        <label for="bookingType">Buchungstyp:</label>
-        <select id="bookingType" name="bookingType" class="input-field">
-            <option value="myself">Für mich selbst</option>
-            <option value="relative">Für einen Angehörigen</option>
-        </select><br><br>
+<h1></h1>
 
-        <div id="relativeInfo" style="display:none;">
-            <label for="firstname">Vorname:</label>
-            <input type="text" id="firstname" name="firstname" class="input-field">
+    <div class="row">
+        <div class="col-12">
+            <table>
+                <thead>
+                <tr>
+                    <th>Termin-Nummer</th>
+                    <th>Patient-Vorname</th>
+                    <th>Patient-Lastname</th>
+                    <th>Impfort</th>
+                    <th>Impfung</th>
+                    <th>Datum</th>
+                    <th>Uhrzeit</th>
+                    <th>Stornierung</th>
+                </tr>
+                </thead>
+                <tbody id="tbody">
 
-            <label for="lastname">Nachname:</label>
-            <input type="text" id="lastname" name="lastname" class="input-field">
-
-            <label for="dateofbirth">Geburtsdatum:</label>
-            <input type="date" id="dateofbirth" name="birthdate" class="input-field">
-
-            <label for="city">Stadt:</label>
-            <input type="text" id="city" name="city" class="input-field">
-
-            <label for="postalcode">Postleitzahl:</label>
-            <input type="text" id="postalcode" name="postalcode" class="input-field">
+                </tbody>
+            </table>
         </div>
-
-        <label for="location">Standort:</label>
-        <select id="location" name="location" required class="input-field" onchange="updateVaccineOptions()">
-            <option value="">Bitte wählen</option>
-            <option value="location1">Standort 1</option>
-            <option value="location2">Standort 2</option>
-            <!-- Weitere Standorte hier einfügen -->
-        </select><br><br>
-
-        <label for="vaccine">Impfstoff:</label>
-        <select id="vaccine" name="vaccine" required class="input-field">
-            <option value="">Bitte wählen</option>
-        </select><br><br>
-
-        <label for="appointmentdate">Datum:</label>
-        <input type="date" id="appointmentdate" name="date" required class="input-field">
-
-        <label for="time">Zeit:</label>
-        <select id="time" name="time" required class="input-field"></select><br><br>
-
-        <button type="submit">Termin buchen</button>
-    </form>
-    <form class="logout-form" action="logout" method="post">
-        <input type="submit" value="Abmelden">
-    </form>
-</div>
+            <div id="noUsersMessage"></div>
+    </div>
 <script src="appointment.js"></script>
+
 </body>
 </html>
