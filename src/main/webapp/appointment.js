@@ -106,33 +106,35 @@
          if ((xmlShop.readyState == 4) && (xmlShop.status == 200)) {
              var resptext = this.responseText;
              console.log("Data >> " + resptext);
-             var dataArray = JSON.parse(resptext);
-             console.log(dataArray.status);
+             var appointmentsArray = JSON.parse(resptext);
+             console.log(appointmentsArray.status);
 
-             // alert(dataArray.message);
+             // alert(appointmentsArray.message);
 
-             if (dataArray.status == 200) {
-                 if (dataArray.data.length > 0) {
+             if (appointmentsArray.status == 200) {
+                 if (appointmentsArray.appointments.length > 0) {
                      let value = '';
-                     for (var item in dataArray.data) {
+                     for (var item in appointmentsArray.appointments) {
                          value += '<tr>'
-                         value += '<td>' + dataArray.data[item].id + '</td>'
-                         value += '<td>' + dataArray.data[item].firstname + '</td>'
-                         value += '<td>' + dataArray.data[item].lastname + '</td>'
-                         value += '<td>' + dataArray.data[item].impfort + '</td>'
-                         value += '<td>' + dataArray.data[item].impfung + '</td>'
-                         value += '<td>' + dataArray.data[item].date + '</td>'
-                         value += '<td>' + dataArray.data[item].time + '</td>'
+                         value += '<td>' + appointmentsArray.appointments[item].id + '</td>'
+                         value += '<td>' + appointmentsArray.appointments[item].firstname + '</td>'
+                         value += '<td>' + appointmentsArray.appointments[item].last + '</td>'
+                         value += '<td>' + appointmentsArray.appointments[item].vaccinationCenterName + '</td>'
+                         value += '<td>' + appointmentsArray.appointments[item].vaccineName + '</td>'
+                         value += '<td>' + appointmentsArray.appointments[item].bookingDate + '</td>'
+                         value += '<td>' + appointmentsArray.appointments[item].startTime + '</td>'
+                         value += '<td>' + appointmentsArray.appointments[item].endTime + '</td>'
                          value += '<td>';
-                         value += ' <button class="button" onclick="deleteUsers(' + dataArray.data[item].id + ')">Delete</button>';
+                         value += ' <button class="button" onclick="deleteUsers(' + appointmentsArray.appointments[item].id + ')">Delete</button>';
                          value += '</td>';
                          value += '</tr>'
                      }
-                     document.getElementById("tbody").innerHTML = value;
-                 } else {
-                     document.getElementById("noUsersMessage").innerHTML = "Sie haben noch kein Termin gebucht";
-                 }
+                      document.getElementById("tbody").innerHTML = value;
+                  }
              }
+                 // else {
+                 //     document.getElementById("noUsersMessage").innerHTML = "Sie haben noch kein Termin gebucht";
+                 // }
          }
      };
      xmlShop.open("GET", "get", true);
@@ -184,8 +186,8 @@ function deleteUsers(id) {
 
             alert(dataArray.message);
             loadUsers();
-
         }
+location.reload();
     };
     xmlShop.open("GET", "delete?id=" + id, true);
     xmlShop.send();

@@ -1,0 +1,68 @@
+.navbar {
+    overflow: hidden;
+    background-color: rgba(14, 57, 94, 0.71); /* Background color of the navbar */
+    position: fixed; /* Fix the navbar at the top */
+    top: 0;
+    width: 100%; /* Full width */
+}
+
+/* Style the links inside the navigation bar */
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2; /* Text color of the links */
+    text-align: center;
+    padding: 14px 16px; /* Padding of the links */
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+    background-color: #4CAF50;  /* Background color of the links on hover */
+    color: white; /* Text color of the links on hover */
+}
+
+/* Add an active class to highlight the current page */
+.navbar a.active {
+    background-color: #3aa2ec;
+   /* Background color of the active link */
+    color: white; /* Text color of the active link */
+}
+
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.search-container input[type=text] {
+    width: 350px;
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-container button[type=submit] {
+    width: 150px;
+    /*background-color: #4CAF50; !* Change the button color as needed *!*/
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-container button[type=submit]:hover {
+    background-color: #45a049; /* Darker Green */
+}
+
+/* Optional: Style the search icon */
+.fa-search {
+    font-size: 18px;
+}
+

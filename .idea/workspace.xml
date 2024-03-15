@@ -9,30 +9,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7dbe11a-d70c-406b-b492-044737469915" name="Changes" comment="just commented">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a8a728ea-aee0-49a7-87db-c5be51d8b181.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a8a728ea-aee0-49a7-87db-c5be51d8b181.xml" afterDir="false" />
+    <list default="true" id="d7dbe11a-d70c-406b-b492-044737469915" name="Changes" comment="everything working here">
+      <change afterPath="$PROJECT_DIR$/src/main/java/hbv/example/controllers/AppointmentServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hbv/example/dao/AppointmentDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hbv/example/model/Appointment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hbv/example/model/Relative.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hbv/example/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/AppointmentServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/AppointmentServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/LogoutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/LogoutServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/RegisterServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dao/AppointmentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dao/AppointmentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dao/RelativeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dao/RelativeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/emailandpdfgenerator/AppointmentConfirmationService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/emailandpdfgenerator/EmailServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/emailandpdfgenerator/PdfServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/Appointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/model/Appointment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/appointment.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/appointment.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/AppointmentServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hbv/example/controllers/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/LogoutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hbv/example/controllers/LogoutServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hbv/example/controllers/RegisterServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dao/AppointmentDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dao/RelativeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hbv/example/dao/RelativeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hbv/example/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/db/DBUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hbv/example/db/DBUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/db/DatabaseConnectionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hbv/example/db/DatabaseConnectionListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/Appointment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hbv/example/model/HelloServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/Relative.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/appointment.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/appointment.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/appointment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/appointment.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/confirmation.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/indexStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/indexStyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/queries.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/queries.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,32 +86,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Tomcat Server.Tomcat 10.1.16.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/madi/Desktop/java/demo 2&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.DBUtil.executor": "Run",
+    "Application.MailSender.executor": "Run",
+    "Application.Test.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Tomcat Server.Tomcat 10.1.16.executor": "Run",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/madi/Desktop/java/swe_3 Kopie",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql",
+      "mariadb"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Tomcat 10.1.16" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.16" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080//demo_war_exploded" />
@@ -191,9 +201,7 @@
       </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="demo:war exploded" />
-        </option>
+        <option name="BuildArtifacts" enabled="false" />
       </method>
     </configuration>
   </component>
@@ -223,7 +231,12 @@
       <workItem from="1709921055463" duration="139000" />
       <workItem from="1709921874116" duration="3089000" />
       <workItem from="1710321962725" duration="2518000" />
-      <workItem from="1710324565911" duration="1190000" />
+      <workItem from="1710324565911" duration="11539000" />
+      <workItem from="1710362531950" duration="3494000" />
+      <workItem from="1710366315009" duration="5781000" />
+      <workItem from="1710373314909" duration="40000" />
+      <workItem from="1710373386114" duration="10309000" />
+      <workItem from="1710400113038" duration="8260000" />
     </task>
     <task id="LOCAL-00001" summary="just commented">
       <option name="closed" value="true" />
@@ -233,7 +246,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709754726186</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="everything working here">
+      <option name="closed" value="true" />
+      <created>1710325928597</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1710325928597</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,7 +273,23 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="just commented" />
-    <option name="LAST_COMMIT_MESSAGE" value="just commented" />
+    <MESSAGE value="everything working here" />
+    <option name="LAST_COMMIT_MESSAGE" value="everything working here" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/hbv/example/emailandpdfgenerator/MailSender.java</url>
+          <line>123</line>
+          <properties class="com.example.emailandpdfgenerator.MailSender">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

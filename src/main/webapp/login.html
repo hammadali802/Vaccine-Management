@@ -15,8 +15,7 @@
     <div class="container">
         <h1>Login</h1>
         <form action="login" method="post"> <!-- Change method to "post" -->
-         <div id="userIdDiv">
-         </div>
+
 
 
 
@@ -24,35 +23,24 @@
             <input type="text" id="email" name="email" required><br>
             <label for="password">Passwort :</label>
             <input type="password" id="password" name="password" required><br>
-            <button type="submit">einloggen</button>
+            <button type="submit">Einloggen</button>
         </form>
 
         <p><a href="index.html" class="links">Home</a></p>
 
         <script>
-            // Get the error parameter from the URL
             const urlParams = new URLSearchParams(window.location.search);
             const error = urlParams.get("error");
             const registration = urlParams.get("registration");
-            // function getUserId(){
-            //     var xhttp = new XMLHttpRequest();
-            //     xhttp.onreadystatechange = function() {
-            //         if (this.readyState == 4 && this.status == 200) {
-            //             document.getElementById("userIdDiv").innerHTML = this.responseText;
-            //             document.getElementById("userId").value = this.responseText;
-            //             console.log(this.responseText);
-            //         }
-            //     };
-            //     xhttp.open("GET", "adduser.swe", true);
-            //     xhttp.send();
-            // }
+
 
             // Display error message if login fails
             if (error === "1") {
                 const errorMessage = document.createElement("p");
                 errorMessage.textContent = "Invalid email or password. Please try again.";
                 errorMessage.style.color = "red";
-                document.body.appendChild(errorMessage);
+                const parentElement = document.querySelector(".container");
+                parentElement.appendChild(errorMessage);
             }
             if (registration === "success") {
                 const successMessage = document.createElement("p");
