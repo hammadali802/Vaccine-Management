@@ -21,12 +21,6 @@ The Vaccination Management System is a web-based application designed to streaml
 - Redis (upcoming enhancement)
 - Various libraries including Java Mail API, iText, and ZXing
 
-## Installation
-
-1. Clone the repository: `git clone [repository_url]`
-2. Set up your MySQL database and import the provided SQL schema.
-3. Configure the database connection settings in the `db.properties` file.
-4. Deploy the project to a Servlet container such as Apache Tomcat.
 
 ## Usage
 
