@@ -4,8 +4,8 @@ body {
     margin: 0;
     padding: 0;
 
-    background-image: url('corona background.jpeg');
-
+    /*background-image: url('corona background.jpeg');*/
+    background-image: linear-gradient(#0e395e, antiquewhite);
     background-repeat: no-repeat;
     color: #0e395e;
     background-size: cover;

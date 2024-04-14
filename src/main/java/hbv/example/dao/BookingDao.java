@@ -32,7 +32,7 @@ public class BookingDao {
                         JSONObject center = new JSONObject();
                         center.put("id", resultSet.getInt("id"));
                         center.put("name", resultSet.getString("name"));
-//                     center.put("location", resultSet.getString("location"));
+                     center.put("location", resultSet.getString("location"));
 
 
                         data.put( center);
@@ -63,6 +63,8 @@ public class BookingDao {
                         vaccine.put("id", resultSet.getInt("id"));
                         vaccine.put("center_id", resultSet.getInt("center_id"));
                         vaccine.put("name", resultSet.getString("name"));
+                        vaccine.put("manufacturer", resultSet.getString("manufacturer"));
+                        vaccine.put("quantity", resultSet.getInt("quantity"));
 //                    vaccine.put("location", resultSet.getString("location"));
 
 
@@ -81,38 +83,71 @@ public class BookingDao {
 
 
 
+    public static JSONObject getAllTimeSlots(int id) throws SQLException {
 
-        public static JSONObject getAllTimeSlots(int id) throws SQLException {
+        JSONObject response = new JSONObject();
+        JSONArray data = new JSONArray();
 
-            JSONObject response = new JSONObject();
-            JSONArray data = new JSONArray();
+        try (Connection connection = DBUtil.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(Queries.SELECT_TIMESLOT_BY_ID)) {
+            preparedStatement.setInt(1, id);
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
 
-            try (Connection connection = DBUtil.getConnection();
-                 PreparedStatement preparedStatement = connection.prepareStatement(Queries.SELECT_TIMESLOT_BY_ID)) {
-                preparedStatement.setInt(1, id);
-                try (ResultSet resultSet = preparedStatement.executeQuery()) {
-                    while (resultSet.next()) {
-
-                        JSONObject timeSlot = new JSONObject();
-                        timeSlot.put("id", resultSet.getInt("id"));
-                        timeSlot.put("center_id", resultSet.getInt("center_id"));
-                        timeSlot.put("timeSlot", resultSet.getString("start_time"));
+                    JSONObject timeSlot = new JSONObject();
+                    timeSlot.put("id", resultSet.getInt("id"));
+                    timeSlot.put("center_id", resultSet.getInt("center_id"));
+                    timeSlot.put("start_time", resultSet.getString("start_time"));
+                    timeSlot.put("end_time", resultSet.getString("end_time"));
+                    timeSlot.put("capacity", resultSet.getInt("capacity"));
 //                    vaccine.put("location", resultSet.getString("location"));
 
 
 
-                        data.put(timeSlot);
-                    }
+                    data.put(timeSlot);
                 }
-                response.put("status", 200);
-                response.put("data", data);
-            } catch (SQLException e) {
-                e.printStackTrace();
-                response.put("status", 500);
             }
-            System.out.println(response);
-            return response;
+            response.put("status", 200);
+            response.put("data", data);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            response.put("status", 500);
         }
+        System.out.println(response);
+        return response;
+    }
+
+//        public static JSONObject getAllTimeSlots(int id) throws SQLException {
+//
+//            JSONObject response = new JSONObject();
+//            JSONArray data = new JSONArray();
+//
+//            try (Connection connection = DBUtil.getConnection();
+//                 PreparedStatement preparedStatement = connection.prepareStatement(Queries.SELECT_TIMESLOT_BY_ID)) {
+//                preparedStatement.setInt(1, id);
+//                try (ResultSet resultSet = preparedStatement.executeQuery()) {
+//                    while (resultSet.next()) {
+//
+//                        JSONObject timeSlot = new JSONObject();
+//                        timeSlot.put("id", resultSet.getInt("id"));
+//                        timeSlot.put("center_id", resultSet.getInt("center_id"));
+//                        timeSlot.put("timeSlot", resultSet.getString("start_time"));
+////                    vaccine.put("location", resultSet.getString("location"));
+//
+//
+//
+//                        data.put(timeSlot);
+//                    }
+//                }
+//                response.put("status", 200);
+//                response.put("data", data);
+//            } catch (SQLException e) {
+//                e.printStackTrace();
+//                response.put("status", 500);
+//            }
+//            System.out.println(response);
+//            return response;
+//        }
 
     }
 

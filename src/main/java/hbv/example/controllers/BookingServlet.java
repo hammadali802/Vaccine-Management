@@ -2,6 +2,7 @@ package hbv.example.controllers;
 
 
 import hbv.example.dao.AppointmentDao;
+import hbv.example.dao.Counters;
 import hbv.example.dao.RelativeDao;
 import hbv.example.emailandpdfgenerator.MailSender;
 import hbv.example.emailandpdfgenerator.PdfGenerator;
@@ -16,15 +17,22 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import org.json.JSONObject;
+import redis.clients.jedis.Jedis;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
 
 //import static com.example.db.DBUtil;
 
 @WebServlet(name = "BookingServlet", value = "/book")
 public class BookingServlet extends HttpServlet {
+    Jedis jedis = new Jedis("localhost", 6379);
+    private Map<String, Integer> vaccineCounts = new HashMap<>();
+    private Map<String, Integer> centerCounts = new HashMap<>();
+    Counters counter = new Counters();
 
 
 //    @Override
@@ -40,7 +48,7 @@ public class BookingServlet extends HttpServlet {
         String firstname = null;
         String lastName = null;
         String email = null;
-
+        counter.incrementPageViews("Page_Called","Buchung");
         HttpSession session = request.getSession(false);
 
         if (session == null) {
@@ -92,13 +100,12 @@ public class BookingServlet extends HttpServlet {
         int center_id = centerIdInteger.intValue();
         String centerName = (String) new JSONObject(request.getParameter("location")).get("name");
 
+//        centerCounts.put(centerName, centerCounts.getOrDefault(centerName, 0) + 1);
+
         Integer vaccineId = (Integer) new JSONObject(request.getParameter("vaccine")).get("id");
         int vaccine_id = vaccineId.intValue();
         String vaccineName = (String) new JSONObject(request.getParameter("vaccine")).get("name");
-        System.out.println(lastName);
-        System.out.println(email);
-        System.out.println(firstname);
-
+//        vaccineCounts.put(vaccineName, vaccineCounts.getOrDefault(vaccineName, 0) + 1);
 
         String appointmentDate = request.getParameter("date");
 
@@ -121,7 +128,11 @@ public class BookingServlet extends HttpServlet {
 
         int appointmentId =  appointmentDAO.addAppointment(appointment);
 
+
         if (appointmentId > 0){
+            counter.redisCounter("Total_Appointment_booked");
+//            counter.centerCounter(centerName);
+//            counter.vacCounter(vaccineName);
             ByteArrayOutputStream byteArrayOutputStream = null;
             try {
                 byteArrayOutputStream = PdfGenerator.sendMailConfirmationWithPdf(firstname,lastName, centerName, vaccineName, appointmentDate, timeSlot);

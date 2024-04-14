@@ -14,6 +14,14 @@ import java.sql.SQLException;
 public class GetVaccines extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        HttpSession session = request.getSession(false);
+
+        if (session == null) {
+            response.sendRedirect("login.html");
+            return;
+        }
+
+
         String getId = request.getParameter("id");
 
 

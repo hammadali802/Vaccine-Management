@@ -1,5 +1,6 @@
 package hbv.example.controllers;
 
+import hbv.example.dao.Counters;
 import hbv.example.dao.UserDao;
 import hbv.example.model.User;
 import jakarta.servlet.RequestDispatcher;
@@ -14,7 +15,7 @@ import java.io.IOException;
 @WebServlet(name = "LoginServlet", value = "/login")
 public class LoginServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
-
+Counters counter = new Counters();
     public LoginServlet(){
         super();
     }
@@ -31,6 +32,8 @@ public class LoginServlet extends HttpServlet {
 //    }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
             HttpSession session = request.getSession();
+        counter.incrementPageViews("Page_called","Einloggen");
+
 
         String email = request.getParameter("email");
         String password = request.getParameter("password");
@@ -40,6 +43,7 @@ public class LoginServlet extends HttpServlet {
         User user = userDao.isValidUser(email, password);
 
         if (user != null) {
+            counter.redisCounter("sessions_created");
             session.setAttribute("user",user);
             RequestDispatcher dispatcher = request.getRequestDispatcher("booking.html");
             dispatcher.forward(request, response);

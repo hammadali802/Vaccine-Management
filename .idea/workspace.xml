@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="demo:war exploded" />
+      <artifact name="demo:war" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -10,34 +10,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7dbe11a-d70c-406b-b492-044737469915" name="Changes" comment="everything working here">
-      <change afterPath="$PROJECT_DIR$/src/main/java/hbv/example/controllers/AppointmentServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hbv/example/dao/AppointmentDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hbv/example/model/Appointment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hbv/example/model/Relative.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hbv/example/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/05f0cfb0-4e70-4984-aa1e-a01d8637271b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/05f0cfb0-4e70-4984-aa1e-a01d8637271b.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/AppointmentServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hbv/example/controllers/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/LogoutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hbv/example/controllers/LogoutServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hbv/example/controllers/RegisterServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dao/AppointmentDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dao/RelativeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hbv/example/dao/RelativeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hbv/example/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/db/DBUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hbv/example/db/DBUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/db/DatabaseConnectionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hbv/example/db/DatabaseConnectionListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/Appointment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hbv/example/model/HelloServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/Relative.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hbv/example/controllers/AppointmentData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hbv/example/controllers/AppointmentData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hbv/example/controllers/BookingServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hbv/example/controllers/BookingServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hbv/example/controllers/GetAllCenters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hbv/example/controllers/GetAllCenters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hbv/example/controllers/GetVaccines.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hbv/example/controllers/GetVaccines.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hbv/example/controllers/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hbv/example/controllers/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hbv/example/controllers/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hbv/example/controllers/RegisterServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hbv/example/dao/BookingDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hbv/example/dao/BookingDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hbv/example/dao/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hbv/example/dao/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hbv/example/db/DBUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hbv/example/db/DBUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hbv/example/db/Queries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hbv/example/db/Queries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hbv/example/emailandpdfgenerator/MailSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hbv/example/emailandpdfgenerator/MailSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/appointment.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/appointment.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/appointment.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/appointment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/appointment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/appointment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/booking.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/booking.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/booking.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/booking.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/booking.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/confirmation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/erdiagram.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/erdiagram.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/indexStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/indexStyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/navbar.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,15 +46,20 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="JavaScript File" />
         <option value="CSS File" />
-        <option value="Servlet" />
         <option value="Class" />
+        <option value="HTML File" />
+        <option value="Servlet" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -88,9 +90,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Counters.executor": "Run",
     "Application.DBUtil.executor": "Run",
     "Application.MailSender.executor": "Run",
+    "Application.RedisToJson.executor": "Run",
     "Application.Test.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Tomcat Server.Tomcat 10.1.16.executor": "Run",
@@ -116,15 +121,28 @@
     ]
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.16">
+    <configuration name="MailSender" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hbv.example.emailandpdfgenerator.MailSender" />
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hbv.example.emailandpdfgenerator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 10.1.16" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.16" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080//demo_war_exploded" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080//demo_war" />
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="demo:war exploded">
+        <artifact name="demo:war">
           <settings>
-            <option name="CONTEXT_PATH" value="/demo_war_exploded" />
+            <option name="CONTEXT_PATH" value="/demo_war" />
           </settings>
         </artifact>
       </deployment>
@@ -201,9 +219,21 @@
       </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="false" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="demo:war" />
+        </option>
+        <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.MailSender" />
+      <item itemvalue="Tomcat Server.Tomcat 10.1.16" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MailSender" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -237,6 +267,11 @@
       <workItem from="1710373314909" duration="40000" />
       <workItem from="1710373386114" duration="10309000" />
       <workItem from="1710400113038" duration="8260000" />
+      <workItem from="1710496190454" duration="686000" />
+      <workItem from="1711896179394" duration="81000" />
+      <workItem from="1712245752900" duration="22000" />
+      <workItem from="1712245797549" duration="6340000" />
+      <workItem from="1712759193340" duration="45796000" />
     </task>
     <task id="LOCAL-00001" summary="just commented">
       <option name="closed" value="true" />
@@ -254,7 +289,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710325928597</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="everything working here">
+      <option name="closed" value="true" />
+      <created>1710496453581</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1710496453581</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,11 +325,20 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/hbv/example/emailandpdfgenerator/MailSender.java</url>
           <line>123</line>
-          <properties class="com.example.emailandpdfgenerator.MailSender">
+          <properties class="hbv.example.emailandpdfgenerator.MailSender">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/hbv/example/dao/BookingDao.java</url>
+          <line>119</line>
+          <properties class="hbv.example.dao.BookingDao">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

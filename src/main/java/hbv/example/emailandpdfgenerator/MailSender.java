@@ -22,7 +22,7 @@ import java.util.Properties;
 public class MailSender{
 
         private String from = "coronaapp65@gmail.com";
-        private String password = "ywdjntzxyllwoclk";
+        private String password = "hhne fbjj oqon gljp";
         private String host = "smtp.gmail.com";
 
         Properties properties = new Properties();
@@ -67,7 +67,7 @@ public class MailSender{
         Thread emailThread = new Thread(() -> {
             try {
 
-                String accessUrl = "http://localhost:8080/demo_war_exploded/appointmentData?id=" + appointmentId;
+                String accessUrl = "https://informatik.hs-bremerhaven.de/docker-hamali-java/appointmentData?id=" + appointmentId;
                 MimeMessage message = new MimeMessage(session);
                 message.setFrom(new InternetAddress(from));
                 message.addRecipient(Message.RecipientType.TO, new InternetAddress(recipientEmail));

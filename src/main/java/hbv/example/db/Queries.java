@@ -6,8 +6,8 @@ public class Queries {
 
 
 
-    public static final String SELECT_ALL_CENTERS= "SELECT vc.id, vc.name FROM vaccinationcenter vc";
-    public static final String SELECT_ALL_VACCINES= "SELECT v.id, v.center_id, v.name FROM vaccines v";
+    public static final String SELECT_ALL_CENTERS= "SELECT * FROM vaccinationcenter vc";
+    public static final String SELECT_ALL_VACCINES= "SELECT * FROM vaccines v";
     public static final String SELECT_VACCINE_BY_ID = "SELECT * FROM vaccines where center_id = ?";
     public static final String SELECT_TIMESLOT_BY_ID = "SELECT * FROM timeslots where center_id = ?";
 

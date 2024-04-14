@@ -98,9 +98,9 @@ function processTimeSlots(parsedTimeSlots) {
         const timeSlotOption = document.createElement("option");
         timeSlotOption.value = JSON.stringify({
             id: slot.id,
-            name: slot.timeSlot
+            name: slot.start_time
         });
-        timeSlotOption.textContent = slot.timeSlot;
+        timeSlotOption.textContent = slot.start_time;
         timeSlotSelect.appendChild(timeSlotOption);
     });
 }

@@ -4,16 +4,18 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="navbar.css">
 
-<body onload="getUserId()">
+<!--<body onload="getUserId()">-->
 <div class="navbar">
     <a href="index.html" >Home</a>
     <a href="register.html">Registrieren</a>
     <a href="#" class="active" >Einloggen</a>
-    <a href="#">Ueber Uns</a>
+    <a href="adminLogin.html" class="roll" >Admin</a>
+
+<!--    <a href="#">Ueber Uns</a>-->
 </div>
 
     <div class="container">
-        <h1>Login</h1>
+        <h1>User Login Seite</h1>
         <form action="login" method="post"> <!-- Change method to "post" -->
 
 
@@ -26,7 +28,7 @@
             <button type="submit">Einloggen</button>
         </form>
 
-        <p><a href="index.html" class="links">Home</a></p>
+        <p><a href="register.html" class="links">Registerrieren</a></p>
 
         <script>
             const urlParams = new URLSearchParams(window.location.search);

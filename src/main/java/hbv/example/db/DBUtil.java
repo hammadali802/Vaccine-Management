@@ -9,10 +9,10 @@ import java.util.concurrent.TimeUnit;
 
 public class DBUtil {
 
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/your-db";
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/your_db";
 
-    private static final String USER = "dsafa";
-    private static final String PASSWORD = "a13232";
+    private static final String USER = "your_password";
+    private static final String PASSWORD = "your_password";
 
     private static final int INITIAL_POOL_SIZE = 5;
     private static final int MAX_POOL_SIZE = 100;
